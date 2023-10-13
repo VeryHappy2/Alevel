@@ -1,0 +1,5 @@
+C:\Users\User\source\repos\The bestest project\bin\Release\net7.0\publish\The bestest project.exe
+C:\Users\User\source\repos\The bestest project\bin\Release\net7.0\publish\The bestest project.dll
+C:\Users\User\source\repos\The bestest project\bin\Release\net7.0\publish\The bestest project.deps.json
+C:\Users\User\source\repos\The bestest project\bin\Release\net7.0\publish\The bestest project.runtimeconfig.json
+C:\Users\User\source\repos\The bestest project\bin\Release\net7.0\publish\The bestest project.pdb

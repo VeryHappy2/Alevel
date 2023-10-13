@@ -1,0 +1,14 @@
+C:\Users\User\source\repos\The bestest project\bin\Debug\net7.0\The bestest project.exe
+C:\Users\User\source\repos\The bestest project\bin\Debug\net7.0\The bestest project.deps.json
+C:\Users\User\source\repos\The bestest project\bin\Debug\net7.0\The bestest project.runtimeconfig.json
+C:\Users\User\source\repos\The bestest project\bin\Debug\net7.0\The bestest project.dll
+C:\Users\User\source\repos\The bestest project\bin\Debug\net7.0\The bestest project.pdb
+C:\Users\User\source\repos\The bestest project\obj\Debug\net7.0\The bestest project.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\source\repos\The bestest project\obj\Debug\net7.0\The bestest project.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\The bestest project\obj\Debug\net7.0\The bestest project.AssemblyInfo.cs
+C:\Users\User\source\repos\The bestest project\obj\Debug\net7.0\The bestest project.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\The bestest project\obj\Debug\net7.0\The bestest project.dll
+C:\Users\User\source\repos\The bestest project\obj\Debug\net7.0\refint\The bestest project.dll
+C:\Users\User\source\repos\The bestest project\obj\Debug\net7.0\The bestest project.pdb
+C:\Users\User\source\repos\The bestest project\obj\Debug\net7.0\The bestest project.genruntimeconfig.cache
+C:\Users\User\source\repos\The bestest project\obj\Debug\net7.0\ref\The bestest project.dll
