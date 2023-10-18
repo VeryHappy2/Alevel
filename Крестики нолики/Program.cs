@@ -29,18 +29,28 @@ do
     Board();
     try
     {
-        if ((array[0] == 'X' && array[1] == 'X' && array[2] == 'X') || // Проверки на победу
+        if ((array[0] == 'X' && array[1] == 'X' && array[2] == 'X') || // Scan
         (array[0] == 'O' && array[3] == 'O' && array[6] == 'O') ||
         (array[3] == 'X' && array[4] == 'X' && array[5] == 'X') ||
         (array[1] == 'O' && array[4] == 'O' && array[7] == 'O') ||
         (array[6] == 'X' && array[7] == 'X' && array[8] == 'X') ||
+        (array[2] == 'X' && array[4] == 'X' && array[6] == 'X') ||
+        (array[0] == 'O' && array[4] == 'O' && array[8] == 'O') ||
+        (array[0] == 'X' && array[3] == 'X' && array[6] == 'X') ||
+        (array[0] == 'X' && array[4] == 'X' && array[8] == 'X') ||
+        (array[0] == 'O' && array[1] == 'O' && array[2] == 'O') ||
+        (array[3] == 'O' && array[4] == 'O' && array[5] == 'O') ||
+        (array[6] == 'O' && array[7] == 'O' && array[8] == 'O') ||
+        (array[2] == 'O' && array[4] == 'O' && array[6] == 'O') ||
+        (array[1] == 'X' && array[4] == 'X' && array[7] == 'X') ||
+        (array[2] == 'X' && array[5] == 'X' && array[8] == 'X') ||
         (array[2] == 'O' && array[5] == 'O' && array[8] == 'O'))
         {
             win = 1;
         }
         else
         {
-            win = 0;
+            win = -1;
         }
 
 
@@ -77,7 +87,11 @@ do
     {
         Console.WriteLine("Write please the numbers that are on the board");
     }
-    
+    catch (FormatException)
+    {
+        Console.WriteLine("Write please the numbers that are on the board");
+    }
+
 
 } while (win != 1 && win != -1);
 if (win == 1) 
