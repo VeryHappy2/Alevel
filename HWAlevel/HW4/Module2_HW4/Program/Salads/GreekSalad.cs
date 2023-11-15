@@ -19,7 +19,7 @@ namespace Module2_HW4.Program.Salads
                 if (answerUserSalad == "greek salad" || answerUserSalad == "greek")
                 {
 
-                    isDone = false;
+                    isDone = true;
                     int collectedProducts = 0;
                     while (!isDone)
                     {
