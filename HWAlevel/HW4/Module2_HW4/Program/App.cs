@@ -4,9 +4,10 @@ using Module2_HW4.Program.Intarfaces;
 using Module2_HW4.Program.Salads;
 
 var serviceCollection = new ServiceCollection()
-    .AddSingleton<IBeginning, Beginning>()
     .AddTransient<ISalads, GreekSalad>()
-    .AddTransient<ISalads, HerringSalad>();
+    .AddTransient<ISalads, HerringSalad>()
+    .AddSingleton<IBeginning, Beginning>();
+
 
 var provider = serviceCollection.BuildServiceProvider();
 
