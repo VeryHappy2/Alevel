@@ -22,7 +22,7 @@ namespace Module2_HW4.Program.Salads
                     int collectedProducts = 0;
                     while (!isDone)
                     {
-                        Console.WriteLine("1\" if you want will join vegetables to the \"Herring Salad\" \n\"2\" if you want to delete vegetables in the salad ");
+                        Console.WriteLine("1\" if you want will join vegetables to the \"Herring Salad\" \n\"2\" if you want to delete vegetables in the salad");
 
                         string createHerriingSalad = Console.ReadLine().ToLower();
 
@@ -89,8 +89,6 @@ namespace Module2_HW4.Program.Salads
                 {
                     Console.WriteLine("Invalid name");
                 }
-
-
             }
         }
     }
