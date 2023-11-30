@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Concurrent;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HW4
 {
@@ -22,6 +19,27 @@ namespace HW4
             {
                 Console.WriteLine("\nMethods Where, Select:" + linq);
             }
+
+            if(contacts.Any(contacts => contacts > 973456320))
+            {
+                Console.WriteLine("Right");
+            }
+            else
+            {
+                Console.WriteLine("Don't right");
+            }
+
+            if (contacts.All(contacts => contacts < 100000000000))
+            {
+                Console.WriteLine("The mostest");
+            }
+            else
+            {
+                Console.WriteLine("Text");
+            }
+            var variable3 = contacts
+                .LastOrDefault(contacts => contacts < 973456320);
+            Console.WriteLine("Method FirstOrDefault: " + variable3);
         }
     }
 }
