@@ -23,6 +23,7 @@ namespace Module2_HW4.Program
 
                     if (answerUserStart == "1")
                     {
+                        
                         Console.WriteLine("What will you cook salad (\"Greek Salad\" \"Herring Salad\")?");
                         answerUserSalad = Console.ReadLine().ToLower();
                         isDone = false;
