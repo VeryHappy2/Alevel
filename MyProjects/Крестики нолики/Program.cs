@@ -97,4 +97,5 @@ do
 if (win == 1) 
 {
     Console.WriteLine($" Player: {player % 2 + 1} win! ");
+    мф
 }
