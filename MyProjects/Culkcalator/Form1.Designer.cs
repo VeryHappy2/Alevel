@@ -97,6 +97,7 @@
             Number3.TabIndex = 5;
             Number3.Text = "3";
             Number3.UseVisualStyleBackColor = true;
+            Number3.Click += Num3;
             // 
             // Number2
             // 
@@ -197,7 +198,6 @@
             textBox.Size = new Size(289, 67);
             textBox.TabIndex = 15;
             textBox.TextAlign = HorizontalAlignment.Right;
-            textBox.TextChanged += TextBox;
             // 
             // Number10
             // 
