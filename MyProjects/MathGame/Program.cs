@@ -62,7 +62,7 @@ double Answer(double number, char specialoperator, double number2)
        case '+':
           return number + number2; //+
        case '/':  
-          return number / number2; 
+          return Math.Round(number / number2); 
        default:
           throw new FormatException("Invalid operator");
     }

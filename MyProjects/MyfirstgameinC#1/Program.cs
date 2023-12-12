@@ -3,7 +3,7 @@
 Console.WriteLine("Hello! Would you like to play my game?");
 var player1 = Console.ReadLine();
 
-if (player1 == "Yes")
+if (player1.ToLower() == "Yes")
 {
     var bot = random.Next(50);
     Console.Clear();

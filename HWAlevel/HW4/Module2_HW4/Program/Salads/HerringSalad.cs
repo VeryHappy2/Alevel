@@ -15,7 +15,7 @@ namespace Module2_HW4.Program.Salads
         {
             try
             {
-                if (answerUserSalad == "herring salad" || answerUserSalad == "herring")
+                if (answerUserSalad.ToLower() == "herring salad" || answerUserSalad.ToLower() == "herring")
                 {
 
                     isDone = false;
