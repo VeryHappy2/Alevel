@@ -1,0 +1,8 @@
+{
+  "Migration": {
+    "IsNeedMigration":  true
+  },
+  "ConnectionStrings": {
+    "DefaultConnection": "Data Source=localhost;Initial Catalog=eShop;Integrated Security=True;Encrypt=False"
+  }
+}
