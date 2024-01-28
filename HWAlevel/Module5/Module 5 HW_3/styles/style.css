@@ -1,0 +1,71 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+#main-index{
+    height: 850px;
+    background-color: rgb(217, 217, 217);
+    text-align: center;
+    font-size: 75px;
+}
+
+.main-resources{
+    width: 100%;
+    height: auto;
+    background-color: rgb(240, 240, 240);
+    padding: 10px; 
+    font-style: 20px;
+
+}
+
+footer{
+    width: 100%;
+    height: 150px;
+}
+
+.pagination{
+    
+    margin: 5px;
+    
+}
+
+.select-background-pagination{
+    background-color: rgb(47, 47, 250);
+}
+
+.mynav {
+    display: flex;
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.list-group-item{
+    text-align: left;
+}
+
+.card{
+    margin: 10px;
+}
+
+.ms-3{
+    margin: 15px;
+}
+
+.name-site{
+    margin-bottom: 15px;
+    margin-left: 8px;
+    margin-right: 15px;
+    margin-top: 15px;
+}
+
+.error404{
+    font-size: 55px ;
+    text-align: center;
+    font-weight: bolder;
+    margin-top: 20%;
+    margin-bottom: 20%;
+}
+
+
