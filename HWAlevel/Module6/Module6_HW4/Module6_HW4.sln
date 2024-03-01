@@ -1,0 +1,98 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Catalog", "Catalog", "{E769E2A0-66AF-44D6-9300-C45D3889E06A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Catalog.Host", "Catalog\Catalog.Host\Catalog.Host.csproj", "{6A8E9683-762E-4E83-BD60-75822AC8265D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{DCFFDCA1-598D-4EA6-AAF6-4BE647B27C32}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+		README.md = README.md
+		settings.ruleset = settings.ruleset
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{A6C7B2CD-2199-497C-9EF5-32274390D2D7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "Infrastructure\Infrastructure\Infrastructure.csproj", "{C877F308-7870-433C-AA13-DE7DBC3675B9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Catalog.UnitTest", "Catalog.Test\Catalog.UnitTest.csproj", "{AD5BFE98-2560-4F04-B3DD-82B9FFCA6AA5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MVC", "Web\MVC\MVC.csproj", "{C438D4B0-0BCD-432A-B244-0214A125CA51}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{F573B8E5-C687-47F7-A824-0E8CE68DA80C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Proxy", "Proxy", "{2B6FB30B-4D71-4F36-A954-AFE105894B61}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "assets", "assets", "{FFA058EE-6ABA-4550-B8ED-F3E39DB474CA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "images", "images", "{A28DD5FA-4E61-415E-B27D-98E1822022DC}"
+	ProjectSection(SolutionItems) = preProject
+		Proxy\assets\images\1.png = Proxy\assets\images\1.png
+		Proxy\assets\images\10.png = Proxy\assets\images\10.png
+		Proxy\assets\images\11.png = Proxy\assets\images\11.png
+		Proxy\assets\images\12.png = Proxy\assets\images\12.png
+		Proxy\assets\images\13.png = Proxy\assets\images\13.png
+		Proxy\assets\images\14.png = Proxy\assets\images\14.png
+		Proxy\assets\images\2.png = Proxy\assets\images\2.png
+		Proxy\assets\images\3.png = Proxy\assets\images\3.png
+		Proxy\assets\images\4.png = Proxy\assets\images\4.png
+		Proxy\assets\images\5.png = Proxy\assets\images\5.png
+		Proxy\assets\images\6.png = Proxy\assets\images\6.png
+		Proxy\assets\images\7.png = Proxy\assets\images\7.png
+		Proxy\assets\images\8.png = Proxy\assets\images\8.png
+		Proxy\assets\images\9.png = Proxy\assets\images\9.png
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "gateway", "gateway", "{5F913BE9-7435-494A-BB32-A69F299D288D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "nginx", "nginx", "{58AC45F0-7016-4743-BA95-0D578E970C44}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "conf.d", "conf.d", "{F6760B78-8BBA-4040-837C-7E58DE08CBB1}"
+	ProjectSection(SolutionItems) = preProject
+		Proxy\gateway\nginx\conf.d\default.conf = Proxy\gateway\nginx\conf.d\default.conf
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6A8E9683-762E-4E83-BD60-75822AC8265D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A8E9683-762E-4E83-BD60-75822AC8265D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A8E9683-762E-4E83-BD60-75822AC8265D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A8E9683-762E-4E83-BD60-75822AC8265D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C877F308-7870-433C-AA13-DE7DBC3675B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C877F308-7870-433C-AA13-DE7DBC3675B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C877F308-7870-433C-AA13-DE7DBC3675B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C877F308-7870-433C-AA13-DE7DBC3675B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD5BFE98-2560-4F04-B3DD-82B9FFCA6AA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD5BFE98-2560-4F04-B3DD-82B9FFCA6AA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD5BFE98-2560-4F04-B3DD-82B9FFCA6AA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD5BFE98-2560-4F04-B3DD-82B9FFCA6AA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C438D4B0-0BCD-432A-B244-0214A125CA51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C438D4B0-0BCD-432A-B244-0214A125CA51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C438D4B0-0BCD-432A-B244-0214A125CA51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C438D4B0-0BCD-432A-B244-0214A125CA51}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6A8E9683-762E-4E83-BD60-75822AC8265D} = {E769E2A0-66AF-44D6-9300-C45D3889E06A}
+		{C877F308-7870-433C-AA13-DE7DBC3675B9} = {A6C7B2CD-2199-497C-9EF5-32274390D2D7}
+		{AD5BFE98-2560-4F04-B3DD-82B9FFCA6AA5} = {E769E2A0-66AF-44D6-9300-C45D3889E06A}
+		{C438D4B0-0BCD-432A-B244-0214A125CA51} = {F573B8E5-C687-47F7-A824-0E8CE68DA80C}
+		{FFA058EE-6ABA-4550-B8ED-F3E39DB474CA} = {2B6FB30B-4D71-4F36-A954-AFE105894B61}
+		{A28DD5FA-4E61-415E-B27D-98E1822022DC} = {FFA058EE-6ABA-4550-B8ED-F3E39DB474CA}
+		{5F913BE9-7435-494A-BB32-A69F299D288D} = {2B6FB30B-4D71-4F36-A954-AFE105894B61}
+		{58AC45F0-7016-4743-BA95-0D578E970C44} = {5F913BE9-7435-494A-BB32-A69F299D288D}
+		{F6760B78-8BBA-4040-837C-7E58DE08CBB1} = {58AC45F0-7016-4743-BA95-0D578E970C44}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C2EB09EB-2DDA-4E8B-9F9A-2506C61C5312}
+	EndGlobalSection
+EndGlobal
