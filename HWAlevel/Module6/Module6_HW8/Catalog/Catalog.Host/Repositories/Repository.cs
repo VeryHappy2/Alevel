@@ -10,23 +10,25 @@ namespace Catalog.Host.Repositories
         where T : BaseEntity
     {
         private readonly ApplicationDbContext _dbContext;
+        private readonly DbSet<T> _dbset;
         private T _result;
 
         public Repository(IDbContextWrapper<ApplicationDbContext> context)
         {
             _dbContext = context.DbContext;
+            _dbset = context.DbContext.Set<T>();
         }
 
         public async Task<int?> AddAsync(T entity)
         {
-            var item = await _dbContext.Set<T>().AddAsync(entity);
+            var item = await _dbset.AddAsync(entity);
             await _dbContext.SaveChangesAsync();
             return item.Entity.Id;
         }
 
         public async Task<int?> UpdateAsync(int id, T entity)
         {
-            _result = await _dbContext.Set<T>().FindAsync(id);
+            _result = await _dbset.FindAsync(id);
 
             if (_result != null)
             {
@@ -34,16 +36,14 @@ namespace Catalog.Host.Repositories
                 await _dbContext.SaveChangesAsync();
                 return _result.Id;
             }
-            else
-            {
-                return null;
-            }
+            
+            return null;
             
         }
 
         public async Task<string> DeleteAsync(int id)
         {
-            _result = await _dbContext.Set<T>()
+            _result = await _dbset
                 .FindAsync(id);
             if(_result != null) 
             {

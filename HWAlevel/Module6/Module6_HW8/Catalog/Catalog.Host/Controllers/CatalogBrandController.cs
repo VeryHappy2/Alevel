@@ -10,7 +10,7 @@ namespace Catalog.Host.Controllers;
 
 [ApiController]
 [Authorize(Policy = AuthPolicy.AllowClientPolicy)]
-[Scope("catalog.brand")]
+[Scope("catalog.catalogbrand")]
 [Route(ComponentDefaults.DefaultRoute)]
 public class CatalogBrandController : ControllerBase
 {

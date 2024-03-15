@@ -141,7 +141,7 @@ public class CatalogServiceTest
 
     [Fact]
 
-    public async Task GetById_Success()
+    public async Task GetByIdAsync_Success()
     {
         // arrange
         int id = 1;
@@ -164,7 +164,7 @@ public class CatalogServiceTest
     }
 
     [Fact]
-    public async Task GetById_Failed()
+    public async Task GetByIdAsync_Failed()
     {
         // arrange
         int id = 1000;
@@ -188,7 +188,7 @@ public class CatalogServiceTest
 
     [Fact]
 
-    public async Task GetByBrand_Success()
+    public async Task GetByBrandAsync_Success()
     {
         // arrange
         string brand = "Azure";
@@ -212,7 +212,7 @@ public class CatalogServiceTest
     }
 
     [Fact]
-    public async Task GetByBrand_Failed()
+    public async Task GetByBrandAsync_Failed()
     {
         // arrange
         string brand = "unknown";
@@ -233,7 +233,7 @@ public class CatalogServiceTest
     }
 
     [Fact]
-    public async Task GetByType_Success()
+    public async Task GetByTypeAsync_Success()
     {
         // arrange
         string type = "Mug";
@@ -256,7 +256,7 @@ public class CatalogServiceTest
     }
 
     [Fact]
-    public async Task GetByType_Failed()
+    public async Task GetByTypeAsync_Failed()
     {
         // arrange
         string type = "232432412";
@@ -265,11 +265,8 @@ public class CatalogServiceTest
 
         _catalogBffRepository.Setup(s => s.GetByTypeAsync(
             It.Is<string>(i => i == type))).ReturnsAsync(item);
-
         _mapper.Setup(s => s.Map<CatalogTypeDto>(
             It.Is<CatalogType>(i => i.Equals(item)))).Returns(itemDto);
-
-
         // act
         var result = await _catalogService.GetByType(type);
 
@@ -278,7 +275,7 @@ public class CatalogServiceTest
     }
 
     [Fact]
-    public async Task GetBrands_Success()
+    public async Task GetBrandsAsync_Success()
     {
         // arrange
         List<string> item = new List<string>();

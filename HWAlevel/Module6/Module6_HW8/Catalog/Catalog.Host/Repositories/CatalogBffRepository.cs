@@ -47,7 +47,10 @@ namespace Catalog.Host.Repositories
 
         public async Task<CatalogItem> GetByIdAsync(int id) //Get item
         {
-            var result = await _dbcontext.CatalogItems.FindAsync(id);
+            var result = await _dbcontext.CatalogItems
+                .Include(x => x.CatalogBrand)
+                .Include(x => x.CatalogType)
+                .FirstOrDefaultAsync(x => x.Id == id);
             if (result != null) 
             { 
                 return result; 

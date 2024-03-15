@@ -5,6 +5,7 @@ namespace Catalog.Host.Models.Requests.Update
 {
     public class UpdateProductRequest : BaseProductRequest
     {
+        [Required]
         public int Id { get; set; }
     }
 }

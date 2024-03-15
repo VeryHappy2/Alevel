@@ -99,12 +99,13 @@ app.UseSwagger()
 app.Use(async (context, next) =>
 {
     var logger = context.RequestServices.GetRequiredService<ILogger<Program>>();
-    LogRequest(logger, context.Request);
+	var id = Guid.NewGuid();
+    LogRequest(logger, context.Request, id);
 
     // Call the next middleware in the pipeline
     await next.Invoke();
 
-    LogResponse(logger, context.Response);
+    LogResponse(logger, context.Response, id);
 });
 app.UseRouting();
 app.UseCors("CorsPolicy");
@@ -134,26 +135,14 @@ IConfiguration GetConfiguration()
     return builder.Build();
 }
 
-void LogRequest(ILogger<Program> logger, HttpRequest request)
+void LogRequest(ILogger<Program> logger, HttpRequest request, Guid id)
 {
-	logger.LogInformation($"Request: {request.Method} {request.Path}");
-
-	foreach (var header in request.Headers)
-	{
-		logger.LogInformation($"{header.Key}: {header.Value}");
-    }
-	
+	logger.LogInformation($"Request id:{id}, Method: {request.Method}, Path {request.Path}");
 }
 
-void LogResponse(ILogger<Program> logger, HttpResponse response)
+void LogResponse(ILogger<Program> logger, HttpResponse response, Guid id)
 {
-
-    logger.LogInformation($"Response: {response.StatusCode}");
-
-    foreach (var header in response.Headers)
-    {
-        logger.LogInformation($"{header.Key}: {header.Value}");
-    }
+    logger.LogInformation($"Response id: {id}, Status: {response.StatusCode}");
 }
 
 void CreateDbIfNotExists(IHost host)

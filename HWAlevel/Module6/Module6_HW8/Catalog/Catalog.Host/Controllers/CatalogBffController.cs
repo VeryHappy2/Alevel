@@ -54,10 +54,7 @@ public class CatalogBffController : ControllerBase
         var result = await _catalogService.GetById(request.Id);
         if(result != null)
         {
-            foreach (var item in result.Name)
-            {
-                _logger.LogInformation($"Catalog item was got object with name: {item}");
-            }
+            _logger.LogInformation($"Catalog item was got object with name: {result}");
         }
         
         return Ok(result);
@@ -68,60 +65,69 @@ public class CatalogBffController : ControllerBase
     public async Task<IActionResult> GetByBrand(BaseBrandRequest request)
     {
         var result = await _catalogService.GetByBrand(request.Brand);
-        if(result != null)
+        if(result == null)
         {
-            foreach (var item in result.Brand)
-            {
-                _logger.LogInformation($"Brand: {item}");
-            }
+            
+            return NotFound();
         }
+        
+        _logger.LogInformation($"Brand: {result}");
         
         return Ok(result);
     }
 
     [HttpPost]
     [ProducesResponseType(typeof(BaseProductResponse), (int)HttpStatusCode.OK)]
+    [ProducesResponseType((int)HttpStatusCode.NotFound)]
     public async Task<IActionResult> GetByType(BaseTypeRequest request)
     {
         var result = await _catalogService.GetByType(request.Type);
-        if(result != null)
+        if(result == null)
         {
-            foreach (var item in result.Type)
-            {
-                _logger.LogInformation($"Type: {item}");
-            }
+
+            return NotFound();
+            
+            
         }
-        
+        _logger.LogInformation($"Type: {result}");
         return Ok(result);
     }
 
     [HttpPost]
-	[AllowAnonymous]
-	public async Task<IActionResult> GetBrands()
+    [AllowAnonymous]
+    [ProducesResponseType((int)HttpStatusCode.NotFound)]
+    public async Task<IActionResult> GetBrands()
     {
         var result = await _catalogService.GetCatalogBrands();
-        if (result != null)
+        if (result == null)
         {
-            foreach (var item in result)
-            {
-                _logger.LogInformation($"Brands: {item}");
-            }
+
+            return NotFound();
         }
+        foreach(var catalogBrand in result)
+        {
+            _logger.LogInformation($"Brand: {catalogBrand}");
+        }
+        
+
         return Ok(result);
     }
 
     [HttpPost]
 	[AllowAnonymous]
 	[ProducesResponseType(typeof(BaseTypeResponse), (int)HttpStatusCode.OK)]
+    [ProducesResponseType((int)HttpStatusCode.NotFound)]
     public async Task<IActionResult> GetTypes()
     {
         var result = await _catalogService.GetCatalogTypes();
-        if (result != null)
+        if (result == null)
         {
-            foreach (var item in result)
-            {
-                _logger.LogInformation($"Type: {item}" );
-            }
+
+            return NotFound();
+        }
+        foreach (var catalogType in result)
+        {
+            _logger.LogInformation($"Type: {catalogType}");
         }
         return Ok(result);
     }
